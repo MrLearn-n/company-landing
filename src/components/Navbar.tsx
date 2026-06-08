@@ -4,9 +4,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "О компании", href: "#about" },
-  { label: "Услуги", href: "#services" },
-  { label: "Оплата", href: "#payment" },
+  { label: "О решении", href: "#about" },
+  { label: "Как работает", href: "#services" },
+  { label: "Модуль приёма платежей", href: "#payment" },
+  { label: "Оплата", href: "/payment" },
   { label: "Контакты", href: "#contacts" },
 ];
 
@@ -24,12 +25,12 @@ export default function Navbar() {
             <span className="text-xl font-bold text-slate-900">НовоТех</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors whitespace-nowrap"
               >
                 {l.label}
               </a>
@@ -38,13 +39,13 @@ export default function Navbar() {
 
           <a
             href="#payment"
-            className="hidden md:inline-flex items-center px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
+            className="hidden lg:inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"
           >
-            Оплатить услуги
+            Подключить модуль
           </a>
 
           <button
-            className="md:hidden p-2 text-slate-600"
+            className="lg:hidden p-2 text-slate-600"
             onClick={() => setOpen(!open)}
             aria-label="Меню"
           >
@@ -54,7 +55,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-slate-100 px-4 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-white border-t border-slate-100 px-4 py-4 flex flex-col gap-4">
           {links.map((l) => (
             <a
               key={l.href}
@@ -70,7 +71,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold"
           >
-            Оплатить услуги
+            Подключить модуль
           </a>
         </div>
       )}
