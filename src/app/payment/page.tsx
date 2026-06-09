@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import PaymentPageForm from "@/components/PaymentPageForm";
 
 export const metadata: Metadata = {
-  title: "Безопасная оплата услуги — НовоТех",
+  title: "Безопасная оплата услуги - НовоТех",
   description:
     "Защищённая страница оплаты для клиентов компаний, использующих платёжный модуль НовоТех.",
 };

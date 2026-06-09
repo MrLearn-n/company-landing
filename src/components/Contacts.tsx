@@ -7,22 +7,22 @@ const contacts = [
   {
     icon: <MapPin size={20} />,
     label: "Адрес",
-    value: "",
+    value: "Г. Москва, ул. Холмогорская, д. 7, кв. 123",
   },
   {
     icon: <Phone size={20} />,
     label: "Телефон",
-    value: "",
+    value: "+7 (991) 528 18 49",
   },
   {
     icon: <Mail size={20} />,
     label: "Email",
-    value: "",
+    value: "georgykrim@yandex.ru",
   },
   {
     icon: <Clock size={20} />,
     label: "Режим работы",
-    value: "Пн–Пт: 9:00–18:00",
+    value: "Пн-Пт: 9:00-18:00",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Contacts() {
                       {c.label}
                     </p>
                     <p className="text-slate-200 text-sm">
-                      {c.value || <span className="text-slate-600 italic">—</span>}
+                      {c.value || <span className="text-slate-600 italic">-</span>}
                     </p>
                   </div>
                 </li>
